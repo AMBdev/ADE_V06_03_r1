@@ -100,8 +100,8 @@ sympy==1.13.3
 tables==3.10.2
 tenacity==9.0.0
 threadpoolctl==3.5.0
-libtk==8.6
 tk
+libtk==8.6
 toml==0.10.2
 tornado==6.4.2
 traitlets==5.14.3
