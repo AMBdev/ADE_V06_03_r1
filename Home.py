@@ -26,7 +26,7 @@ import gc
 import os
 if os.environ.get('DISPLAY','') == '':
     print('no display found. Using non-interactive Agg backend')
-    tkinter.use('Agg')
+    Tk.use('Agg')
 #sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
 #from Pages.DataLoad import *
@@ -39,9 +39,7 @@ if os.environ.get('DISPLAY','') == '':
 #import streamlit as st
 # for key in st.session_state.keys():
 #del st.session_state[key]
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
+
 
 
 
