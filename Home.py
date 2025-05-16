@@ -24,8 +24,9 @@ import sys
 import gc
 
 import os
-os.system('Xvfb :1 -screen 0 1600x1200x16 &')  # Create virtual display
-os.environ['DISPLAY'] = ':1.0'  # Set the DISPLAY variable
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    tkinter.use('Agg')
 #sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
 #from Pages.DataLoad import *
