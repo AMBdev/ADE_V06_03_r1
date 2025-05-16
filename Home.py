@@ -58,11 +58,21 @@ with st.form(key='Form1'):
 
 #@st.cache_resource
 
+def file_selector(folder_path='.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a file', filenames)
+    return os.path.join(folder_path, selected_filename)
+
+    filename = file_selector()
+    st.write('You selected `%s`' % filename)
+
+
+
 def Load_Data():
 
     global Mydir
 
-    root = tk.Tk()
+    root = Tk()
     root.title("Choisir le dossier ou sous dossier hébergeant les acquisitions")
     root.geometry('800x400')
 
@@ -1274,7 +1284,8 @@ if LD:
     progress_text = "Analyse des acquisitions...Operation in progress. Please wait."
     my_bar = st.progress(0)
     st.write(progress_text)
-    Load_Data()
+    #Load_Data()
+    file_selector()
     Data_Caract()
     TraitLogs_Caps()
     ParametersListCont()
