@@ -24,9 +24,8 @@ import sys
 import gc
 
 import os
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using non-interactive Agg backend')
-    Tk.use('Agg')
+export DISPLAY=:0.0
+
 #sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
 #from Pages.DataLoad import *
