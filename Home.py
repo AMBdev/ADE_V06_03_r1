@@ -62,7 +62,7 @@ def Load_Data():
 
     global Mydir
 
-    root = Tk()
+    root = Tk.Tk()
     root.title("Choisir le dossier ou sous dossier hébergeant les acquisitions")
     root.geometry('800x400')
 
