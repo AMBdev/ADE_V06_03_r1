@@ -24,7 +24,7 @@ import sys
 import gc
 
 import os
-export DISPLAY=:0.0
+
 
 #sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
