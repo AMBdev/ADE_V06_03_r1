@@ -23,7 +23,7 @@ import streamlit as st
 import sys
 import gc
 
-sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
+#sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
 #from Pages.DataLoad import *
 #from tkinter import Tk
@@ -35,6 +35,12 @@ sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 #import streamlit as st
 # for key in st.session_state.keys():
 #del st.session_state[key]
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using :0.0')
+    os.environ.__setitem__('DISPLAY', ':0.0')
+
+
+
 
 with st.form(key='Form1'):
     st.header("Extract_ADAS_Data")
