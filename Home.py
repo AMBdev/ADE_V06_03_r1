@@ -15,6 +15,7 @@ import numpy as np
 import mdfreader
 from asammdf import MDF, Signal,set_global_option
 set_global_option("raise_on_multiple_occurrences", False)
+import tkinter as tk
 from tkinter import filedialog as fd
 from tkinter import *
 import pathlib
