@@ -18,11 +18,14 @@ set_global_option("raise_on_multiple_occurrences", False)
 from tkinter import filedialog as fd
 from tkinter import *
 import pathlib
-import os
+#import os
 import streamlit as st
 import sys
 import gc
 
+import os
+os.system('Xvfb :1 -screen 0 1600x1200x16 &')  # Create virtual display
+os.environ['DISPLAY'] = ':1.0'  # Set the DISPLAY variable
 #sys.path.insert(1, "C:/Users/a863900/.streamlit/Adas_Data_Analysis_v04")
 
 #from Pages.DataLoad import *
