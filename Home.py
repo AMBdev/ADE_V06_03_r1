@@ -15,7 +15,7 @@ import numpy as np
 import mdfreader
 from asammdf import MDF, Signal,set_global_option
 set_global_option("raise_on_multiple_occurrences", False)
-import tkinter as tk
+import tkinter as Tk
 from tkinter import filedialog as fd
 from tkinter import *
 import pathlib
@@ -61,7 +61,7 @@ def Load_Data():
 
     global Mydir
 
-    root = tk()
+    root = Tk()
     root.title("Choisir le dossier ou sous dossier hébergeant les acquisitions")
     root.geometry('800x400')
 
